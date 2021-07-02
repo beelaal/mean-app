@@ -17,10 +17,7 @@ app.use(logger('dev'));
 app.use(cors());
 
 //Import Employee Routes
-import itemsRoute from "../api/routes/items";
-import userRoute from "../api/routes/user";
-import dashboardRoute from "../api/routes/dashboard";
-import userItemRoute from "../api/routes/userItem";
+import OrderRoute from "../api/routes/orders";
 
 //Import MongoDB Connection
 import "../api/config/database";
@@ -54,17 +51,9 @@ app.use((req, res, next) => {
   next();
 });
 
-//Route for Items
-app.use('/api', itemsRoute);
+//Route for orders
+app.use('/api', OrderRoute);
 
-//Route for User
-app.use('/user', userRoute);
-
-//Route for DashBoard
-app.use('/user', dashboardRoute);
-
-//Route for User Item
-app.use('/user', userItemRoute);
 
 //Setup Port & Listening to Server
 const port = process.env.PORT || 5000;

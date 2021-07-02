@@ -2,7 +2,7 @@ import { Strategy } from "passport-jwt";
 import { ExtractJwt } from "passport-jwt";
 
 //Import User Model
-import User from "../models/userSchema";
+import User from "../models/orderSchema";
 
 //Import Secret Key
 import { SECRET_OR_KEY } from "./keys";
